@@ -1,12 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
-import { useEffect, useState, useRef } from "react";
-import { Music, Music2, Volume2, VolumeX } from "lucide-react";
-import MusicNotes from "./components/MusicNotes";
-import Equalizer from "./components/Equalizer";
-import Waveform from "./components/Waveform";
+import { useEffect, useState } from "react";
 import LuxuryBackground from "./components/LuxuryBackground";
 import QuoteInterlude from "./components/QuoteInterlude";
-import VinylInterlude from "./components/VinylInterlude";
 import ChapterSection from "./components/ChapterSection";
 
 const chapters = [
@@ -82,43 +77,6 @@ function Loader() {
   );
 }
 
-function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const toggleMusic = () => {
-    setHasInteracted(true);
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(e => console.log("Audio play failed:", e));
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  return (
-    <div className="fixed top-6 right-6 z-[500] flex items-center gap-4">
-      <audio
-        ref={audioRef}
-        loop
-        src="https://cdn.pixabay.com/audio/2022/08/02/audio_8845896627.mp3" // Soft Romantic Lo-fi Beat
-      />
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={toggleMusic}
-        className={`flex items-center gap-3 px-5 py-2.5 rounded-full border border-gold/30 bg-black-rich/60 backdrop-blur-xl text-gold text-[10px] uppercase tracking-[0.25em] transition-all hover:bg-gold/20 shadow-2xl ${!hasInteracted && !isPlaying ? 'animate-pulse border-gold/60' : ''}`}
-      >
-        {isPlaying ? <Volume2 size={14} className="animate-bounce" /> : <VolumeX size={14} />}
-        <span className="font-medium">{isPlaying ? "Music On" : "Tap for Music"}</span>
-      </motion.button>
-    </div>
-  );
-}
-
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -134,9 +92,6 @@ export default function App() {
       </AnimatePresence>
       
       <LuxuryBackground />
-      <MusicNotes />
-      <Equalizer />
-      <MusicPlayer />
 
       <section id="hero" className="h-screen flex flex-col items-center justify-center relative overflow-hidden">
         <motion.p
@@ -145,7 +100,7 @@ export default function App() {
           transition={{ duration: 0.7 }}
           className="font-sans text-[9px] font-extralight tracking-[0.65em] text-gold uppercase mb-[22px]"
         >
-          LYSA
+          LILY BELLO SAWA · LYSA
         </motion.p>
 
         <h1 className="flex flex-col items-center gap-2 relative z-[2]">
@@ -212,8 +167,6 @@ export default function App() {
         </motion.div>
       </section>
 
-      <Waveform id="wf1" />
-
       {chapters.map((chap, i) => (
         <div key={i}>
           <ChapterSection
@@ -223,7 +176,6 @@ export default function App() {
             title={chap.title}
             content={chap.content}
           />
-          {i === 2 && <VinylInterlude />}
           {i === 4 && <QuoteInterlude quote="&quot;Some people bloom in silence.<br>Others light up the entire garden.&quot;" />}
           {i === 7 && <QuoteInterlude quote="&quot;She is the melody you cannot stop humming —<br>the note that lingers long after the music fades.&quot;" />}
         </div>
@@ -273,7 +225,7 @@ export default function App() {
 
       <footer className="p-12 text-center border-t border-gold/10 bg-black-rich/20 backdrop-blur-sm">
         <p className="font-sans text-[9px] font-extralight tracking-[0.6em] text-gold-dim uppercase">
-          Made with love · Lily Bello Sawa · All rights reserved
+          your best is yet to come . lily bello sawa . all right reserved
         </p>
       </footer>
     </div>
