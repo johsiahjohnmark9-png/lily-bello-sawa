@@ -84,9 +84,11 @@ function Loader() {
 
 function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const toggleMusic = () => {
+    setHasInteracted(true);
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
@@ -102,16 +104,16 @@ function MusicPlayer() {
       <audio
         ref={audioRef}
         loop
-        src="https://cdn.pixabay.com/audio/2022/03/10/audio_c8c8a73456.mp3" // Soft Romantic Piano
+        src="https://cdn.pixabay.com/audio/2022/08/02/audio_8845896627.mp3" // Soft Romantic Lo-fi Beat
       />
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={toggleMusic}
-        className="flex items-center gap-3 px-4 py-2 rounded-full border border-gold/30 bg-black-rich/40 backdrop-blur-md text-gold text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-gold/10"
+        className={`flex items-center gap-3 px-5 py-2.5 rounded-full border border-gold/30 bg-black-rich/60 backdrop-blur-xl text-gold text-[10px] uppercase tracking-[0.25em] transition-all hover:bg-gold/20 shadow-2xl ${!hasInteracted && !isPlaying ? 'animate-pulse border-gold/60' : ''}`}
       >
-        {isPlaying ? <Volume2 size={14} /> : <VolumeX size={14} />}
-        <span>{isPlaying ? "Music On" : "Play Music"}</span>
+        {isPlaying ? <Volume2 size={14} className="animate-bounce" /> : <VolumeX size={14} />}
+        <span className="font-medium">{isPlaying ? "Music On" : "Tap for Music"}</span>
       </motion.button>
     </div>
   );
