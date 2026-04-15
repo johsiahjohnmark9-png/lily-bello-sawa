@@ -53,7 +53,7 @@ const chapters = [
   {
     chapter: "Chapter Nine",
     title: "Honesty",
-    content: "the very day LYSA you feel like i josiah disrespects you, please cut me, but for now sincely tell me if you liked it and give me a review lol"
+    content: "the very day Lily you feel like i josiah disrespects you, please cut me, but for now sincely tell me if you liked it and give me a review lol"
   }
 ];
 
@@ -76,7 +76,7 @@ function Loader() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="font-serif-display text-[13px] font-normal tracking-[0.7em] text-gold uppercase"
       >
-        LYSA
+        Lily Bello Sawa
       </motion.div>
     </motion.div>
   );
@@ -143,18 +143,38 @@ export default function App() {
           transition={{ duration: 0.7 }}
           className="font-sans text-[9px] font-extralight tracking-[0.65em] text-gold uppercase mb-[22px]"
         >
-          -LYSA-
+          LYSA
         </motion.p>
 
-        <h1 className="text-center relative z-[2]">
+        <h1 className="flex flex-col items-center gap-2 relative z-[2]">
           <div className="block overflow-hidden">
             <motion.span
               initial={{ y: "115%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-serif-display text-[clamp(64px,18vw,160px)] font-bold tracking-[0.04em] text-gold leading-none"
+              className="inline-block font-serif-display text-[clamp(64px,16vw,120px)] font-bold tracking-[0.04em] text-cream leading-none"
             >
-              LYSA
+              Lily
+            </motion.span>
+          </div>
+          <div className="block overflow-hidden">
+            <motion.span
+              initial={{ y: "115%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, delay: 0.48, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-block font-serif-display text-[clamp(48px,12vw,80px)] font-normal italic text-gold leading-[1.1]"
+            >
+              Bello
+            </motion.span>
+          </div>
+          <div className="block overflow-hidden">
+            <motion.span
+              initial={{ y: "115%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, delay: 0.66, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-block font-serif-display text-[clamp(32px,8vw,56px)] font-normal tracking-[0.28em] text-cream-dim leading-[1.2]"
+            >
+              Sawa
             </motion.span>
           </div>
         </h1>
@@ -225,7 +245,7 @@ export default function App() {
           transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
           className="font-serif-display text-[clamp(48px,12vw,96px)] italic font-normal text-gold"
         >
-          LYSA
+          Lily Bello Sawa
         </motion.h2>
 
         <motion.p
@@ -251,7 +271,7 @@ export default function App() {
 
       <footer className="p-12 text-center border-t border-gold/10 bg-black-rich/20 backdrop-blur-sm">
         <p className="font-sans text-[9px] font-extralight tracking-[0.6em] text-gold-dim uppercase">
-          Made with love · LYSA · All rights reserved
+          Made with love · Lily Bello Sawa · All rights reserved
         </p>
       </footer>
     </div>
