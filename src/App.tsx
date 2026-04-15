@@ -12,53 +12,48 @@ import ChapterSection from "./components/ChapterSection";
 const chapters = [
   {
     chapter: "Chapter One",
-    title: "The Golden Hour",
-    content: "There are people who carry their light within them — Lily is one of those rare souls. In this moment, captured in the warmth of the golden hour, she reminds us that beauty is not just what you see. It is what you feel standing in someone's presence."
+    title: "The Experience",
+    content: "Can’t wait to see you headlining The Experience. Just remember, when you’re famous, I expect a VIP seat and a shoutout for being your first fan lol"
   },
   {
     chapter: "Chapter Two",
-    title: "Soulful",
-    content: "Depth. That is the first word that comes to mind. Behind those eyes lies a universe — stories untold, dreams still flowering, wisdom quietly gathering. Lily does not just inhabit a room; she transforms it entirely."
+    title: "Heart of Gold",
+    content: "Jokes aside, your dream of opening an orphanage is the coolest thing about you. Your heart is actually bigger than your ego (and that’s saying a lot!). ❤️"
   },
   {
     chapter: "Chapter Three",
-    title: "Radiance",
-    content: "She glows — not from the light around her, but from the life within her. Lily's radiance is the kind that does not dim with seasons or distance. It multiplies. It reaches across every room, every silence, every year."
+    title: "The Eviction Notice",
+    content: "There are only two ways I’m leaving your DMs: 1. You say 'I do' at the altar to some lucky guy and ill be happy for you. 2. You tell me to get lost. Until then? You’re stuck with me. lol"
   },
   {
     chapter: "Chapter Four",
-    title: "The Dreamer",
-    content: "Dreams are her native language. She speaks them not with words, but with the way she moves through the world — purposefully, beautifully, always a little ahead of where the rest of us are still standing."
+    title: "Reasons",
+    content: "This website is 10% appreciation, 90% me trying to make you give me a review and how you like the site and if it did made you blush. Hope it made you smile. You're the best"
   },
   {
     chapter: "Chapter Five",
-    title: "In Her Element",
-    content: "Watch her when she is fully herself — unbothered, unfaded, completely at ease. This is Lily in her element. Confident not from pride, but from a quiet knowing that she is exactly where she is meant to be."
+    title: "Your Hands",
+    content: "well i have to say you have a pretty hands and nails, and just know that if we meet ill Definitely hold your hands guy lol"
   },
   {
     chapter: "Chapter Six",
-    title: "Timeless",
-    content: "Elegance is not a trend for Lily — it is her nature. Effortlessly timeless in every expression, every glance, every smile. Years from now, these photographs will still feel like they were taken in a golden age."
+    title: "Self-Respect",
+    content: "In a world of people doing anything for likes, I really respect how you carry yourself. You're a 'Social Media Person' with actual values. Rare find. 💎"
   },
   {
     chapter: "Chapter Seven",
-    title: "The Muse",
-    content: "Artists search lifetimes for a subject like this. Lily is a muse not because she poses perfectly, but because she exists honestly. Every frame tells a story. Every expression is an invitation to feel something real."
+    title: "Movie Recommendation",
+    content: "i have a movie ill like you watch, its not on netflix tho, but the name is ''hacksaw ridge''"
   },
   {
     chapter: "Chapter Eight",
-    title: "Bloom",
-    content: "Like the finest things in nature, she is always becoming more beautiful. Lily blooms not all at once, but steadily — in the way gold is refined, in the way great songs find you slowly, then all at once."
+    title: "Don't Mind Me Pls",
+    content: "i may be creepy and weird, but omo it only happens when am in your dm ne fa lol"
   },
   {
     chapter: "Chapter Nine",
-    title: "Luminous",
-    content: "There is a particular kind of light that only certain people carry — warm, unwavering, generous. Lily is that light. In her presence, rooms become warmer, conversations grow richer, and moments become memories."
-  },
-  {
-    chapter: "Chapter Ten",
-    title: "Legacy",
-    content: "Every photograph is a promise to the future — that she was here, that she shone, that her story mattered. Lily Bello Sawa is not just a name. She is a legacy being written, one radiant chapter at a time."
+    title: "Honesty",
+    content: "the very day LYSA you feel like i josiah disrespects you, please cut me, but for now sincely tell me if you liked it and give me a review lol"
   }
 ];
 
@@ -81,7 +76,7 @@ function Loader() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="font-serif-display text-[13px] font-normal tracking-[0.7em] text-gold uppercase"
       >
-        Lily Bello Sawa
+        LYSA
       </motion.div>
     </motion.div>
   );
@@ -157,29 +152,9 @@ export default function App() {
               initial={{ y: "115%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-serif-display text-[clamp(64px,16vw,120px)] font-bold tracking-[0.04em] text-cream leading-none"
+              className="inline-block font-serif-display text-[clamp(64px,18vw,160px)] font-bold tracking-[0.04em] text-gold leading-none"
             >
-              Lily
-            </motion.span>
-          </div>
-          <div className="block overflow-hidden">
-            <motion.span
-              initial={{ y: "115%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 1.1, delay: 0.48, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-serif-display text-[clamp(48px,12vw,80px)] font-normal italic text-gold leading-[1.1]"
-            >
-              Bello
-            </motion.span>
-          </div>
-          <div className="block overflow-hidden">
-            <motion.span
-              initial={{ y: "115%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 1.1, delay: 0.66, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-serif-display text-[clamp(32px,8vw,56px)] font-normal tracking-[0.28em] text-cream-dim leading-[1.2]"
-            >
-              Sawa
+              LYSA
             </motion.span>
           </div>
         </h1>
@@ -221,7 +196,7 @@ export default function App() {
         <div key={i}>
           <ChapterSection
             index={i}
-            total={10}
+            total={chapters.length}
             chapter={chap.chapter}
             title={chap.title}
             content={chap.content}
@@ -250,7 +225,7 @@ export default function App() {
           transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
           className="font-serif-display text-[clamp(48px,12vw,96px)] italic font-normal text-gold"
         >
-          Lily Bello Sawa
+          LYSA
         </motion.h2>
 
         <motion.p
@@ -276,7 +251,7 @@ export default function App() {
 
       <footer className="p-12 text-center border-t border-gold/10 bg-black-rich/20 backdrop-blur-sm">
         <p className="font-sans text-[9px] font-extralight tracking-[0.6em] text-gold-dim uppercase">
-          Made with love · Lily Bello Sawa · All rights reserved
+          Made with love · LYSA · All rights reserved
         </p>
       </footer>
     </div>
